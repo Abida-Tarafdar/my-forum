@@ -8,7 +8,7 @@ INSERT INTO users (username, email) VALUES ('Maisha', 'babym4444@example.com');
 
 INSERT INTO topics (name) VALUES ('Share your 3D blender artworks!');
 INSERT INTO topics (name) VALUES ('Haircare');
-INSERT INTO topics (name) VALUES ('NoStupidQuestions');
+INSERT INTO topics (name) VALUES ('Maths');
 
 INSERT INTO posts (user_id, topic_id, content) VALUES (1, 1, 'hi world, look at my first donut render :)');
 INSERT INTO posts (user_id, topic_id, content) VALUES (2, 2, 'What are your favourite Y2K hairstyles? ');

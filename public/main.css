@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3f3; /* Very light pink */
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #6a1b9a; /* Pastel lilac */
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f4b6c2; /* Pastel pink */
+    border-bottom: 2px solid #e1a3b4; /* Slightly darker pink */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #e1a3b4; /* Slightly darker pink */
+    color: #ffffff; /* White text */
+}
+
+/* Main Content */
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4b6c2; /* Pastel pink */
+    margin: 0;
+    color: #ffffff; /* White text */
+}
+
+h2 {
+    color: #6a1b9a; /* Pastel lilac */
+}
+
+p {
+    margin: 15px 20px;
+    line-height: 1.6;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+/* Forms */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    border: 1px solid #e1a3b4; /* Slightly darker pink */
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: #6a1b9a; /* Pastel lilac */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #4a0072; /* Darker lilac */
+}
+
+/* Containers */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e1a3b4; /* Slightly darker pink */
+    border-radius: 8px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Posts - <%= forumName %></title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" /><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>All Posts</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>User ID</th>
+                <th>Topic ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < availablePosts.length; i++) { %>
+                <tr>
+                    <td><%= availablePosts[i].title %></td>
+                    <td><%= availablePosts[i].content %></td>
+                    <td><%= availablePosts[i].user_id %></td>
+                    <td><%= availablePosts[i].topic_id %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/topics">Topics</a></li>
+            <li><a href="/users">Users</a></li>
+            <li><a href="/posts">Posts</a></li>
+            <li><a href="/addpost">Add Post</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
+s

@@ -14,7 +14,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'appuser',
   password: 'app2027',
-  database: 'myForum'
+  database: 'myRevisionForum' 
 });
 
 // Connect to the database

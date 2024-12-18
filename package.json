@@ -8,10 +8,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "curl": "^0.1.4",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "init": "^0.1.2",
-    "mysql2": "^3.11.0",
+    "mysql2": "^3.11.5",
     "node": "^22.6.0",
     "node.js": "^0.0.1-security"
   },

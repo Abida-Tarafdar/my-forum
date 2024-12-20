@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <head>
-    <title>Welcome to <%= forumName %></title>
+    <title>Shop- <%= forumName %></title>
     <link rel="stylesheet"  type="text/css" href="/main.css" />
 </head>
 <body>
-    <h1>Studybeans</h1>
+<h1>Welcome to <%= forumName %></h1>
 
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/topics">Topics</a></li>
-            <li><a href="/users">Users</a></li>
-            <li><a href="/posts">Posts</a></li>
-            <li><a href="/addpost">Add Post</a></li>
+            <li><a href="/garden">My Garden</a></li>
+            <li><a href="/posts">Community</a></li>
+            <li><a href="/login">Change User</a></li>
+            <li><a href="/about">Our mission<a></li>
+
         </ul>
     </nav>
+
+
+    <form action="/search_result" method="GET">
+        <p>You have 200 nectar points available!</p>
+        <p>Browse which flowers to plant.</p>
+        <input id="search_box" type="text" name="search_text" placeholder="Enter search text">
+        <input id="search_box" type="text" name="category" placeholder="Enter category">
+        <input type="submit" value="OK">
+    </form>
+    
 </body>
 
-<form action="/search_result" method="GET">
-    <p>Search for your friends.</p>
-    <input id="search_box" type="text" name="search_text">
-    <input type="submit" value="OK" >
-  </form>
+<div id ="center">
+    <img src="https://i.pinimg.com/736x/fc/c8/db/fcc8db682116dc6dfa6c58289ddb2f9a.jpg" style="width:40%">
+</div>
+
+
 </html>

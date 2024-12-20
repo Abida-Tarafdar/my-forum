@@ -5,16 +5,38 @@
     <link rel="stylesheet"  type="text/css" href="/main.css" /><link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Anyone can join our community!</h1>
-    <p>Read and share stories you want for that fast dopamine hit.</p>
+    <h1>Our mission at <%= forumName %></h1>
     <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/topics">Topics</a>
-        <a href="/users">Users</a>
-        <a href="/posts">Posts</a>
-        <a href="/addpost">Add Post</a>
-        <a href="/search">Search</a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/garden">My Garden</a></li>
+            <li><a href="/posts">Community</a></li>
+            <li><a href="/search">Shop</a></li>
+            <li><a href="/register">Change User</a></li>
+        </ul>
     </nav>
+    <section class="about">
+        <div class="container">
+          <h1>Honey... I'm saving the bees.</h1>
+          <p class="intro">
+            Our mission is sweet and simple: Bee productive and <span class="highlight">reap what you sow</span>.
+          </p>
+          <div class="content">
+            <p>
+            At <span class="highlight"><%= forumName %></span>, we believe productivity should bloom, and so should the planet. 
+            Join us on a journey where every study session leads to real-world impact!
+          </p>
+            <p>
+              By using the Pomodoro technique, you’ll earn <span class="highlight">seed tokens</span> every time you complete a study session. These tokens let you buy beautiful flowers for your virtual garden.
+            </p>
+            <p>
+              But the real magic happens with your progress. For every hour you study, we donate to <span class="highlight">local honey farmers</span> who extract honey without destroying the hive. Bee colonies actually share their sweet golden honey -without stinging and dying- with their keepers as payment in exchange for protection of their home. 
+            </p>
+            <p>
+              Let's grow together—one study session, one flower, and one bee at a time!
+            </p>
+          </div>
+        </div>
+      </section>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Flashcards</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <h1>Your Flashcards</h1>
+
+    <a href="/addflashcard">Add New Flashcard</a>
+
+    <% flashcards.forEach(flashcard => { %>
+        <div>
+            <h3><%= flashcard.title %></h3>
+            <p><strong>Question:</strong> <%= flashcard.question %></p>
+            <p><strong>Answer:</strong> <%= flashcard.answer %></p>
+        </div>
+    <% }) %>
+
+    <br>
+    <a href="/community">Go to Community</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sign in to <%= forumName %></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+
+    <h1>Sign In to <%= forumName %></h1>
+    <nav>
+      <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/garden">My Garden</a></li>
+          <li><a href="/posts">Community</a></li>
+          <li><a href="/search">Shop</a></li>
+          <li><a href="/about">Our mission<a></li>
+      </ul>
+      </ul>
+  </nav>
+    <form method="POST" action="/login">
+      Email: <input id="email" type="email" name="email" placeholder="Enter your email" required />
+      Password: <input id="password" type="password" name="password" placeholder="Enter your password" required />
+      <input type="submit" value="Login" />
+    </form>
+
+    Not an existing user?
+    <!-- Buttons with links for signing in-->
+    <a href="/register"><button>Sign Up</button></a>
+  </body>
+</html>

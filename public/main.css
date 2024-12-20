@@ -11,6 +11,13 @@ h1, h2, h3 {
     color: #6a1b9a; /* Pastel lilac */
 }
 
+/*Images*/
+#center {  
+    text-align: center;
+}
+
+/*Buttons*/
+
 /* Navigation Bar */
 nav ul {
     list-style-type: none;
@@ -95,4 +102,129 @@ input[type="submit"]:hover {
     background-color: #ffffff; /* White background */
     border: 1px solid #e1a3b4; /* Slightly darker pink */
     border-radius: 8px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-image: url('path_to_your_image.jpg'); /* Add a background image of flowers or bees */
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.intro {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #FF9800;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.content p:hover {
+    opacity: 0.8;
+}
+
+/*Flashcards*/
+.flashcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .flashcard {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .flashcard h3 {
+    color: #6a1b9a; /* Pastel lilac */
+  }
+  
+  .flashcard .answer {
+    margin-top: 10px;
+    color: #333;
+    font-style: italic;
+  }
+  
+  .flashcard .question {
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .flashcard .answer {
+    display: none; /* hidden */
+  }
+  
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        padding: 1rem;
+        height: auto;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .intro {
+        font-size: 0.9rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
 }

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>Add Flashcard - <%= forumName %></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+</head>
+<body>
+    <h1>Add a New Flashcard</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/topics">Topics</a></li>
+            <li><a href="/register">Users</a></li>
+            <li><a href="/posts">Posts</a></li>
+            <li><a href="/addpost">Add Post</a></li>
+            <li><a href="/flashcards">Flashcards</a></li>
+        </ul>
+    </nav>
+
+    <form method="POST" action="/addflashcard">
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id" required />
+
+        <label for="topic_id">Topic:</label>
+        <select name="topic_id" id="topic_id" required>
+            <% topics.forEach(function(topic) { %>
+                <option value="<%= topic.id %>"><%= topic.name %></option>
+            <% }); %>
+        </select>
+
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" required />
+
+        <label for="answer">Answer:</label>
+        <textarea id="answer" name="answer" required></textarea>
+
+        <button type="submit">Add Flashcard</button>
+    </form>
+</body>
+</html>

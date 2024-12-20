@@ -1,15 +1,41 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Sign In to <%= forumName %></title>
-    <link rel="stylesheet" type="text/css" href="/main.css" />
-  </head>
-  <body>
-    <h1>Sign In to <%= forumName %></h1>
-    <form method="POST" action="/signin">
-      <p>Email: <input id="email" type="email" name="email" placeholder="Enter your email" required /></p>
-      <p>Password: <input id="password" type="password" name="password" placeholder="Enter your password" required /></p>
-      <input type="submit" value="Sign In" />
-    </form>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - <%= forumName %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>All Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Joined</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% availableUsers.forEach(function(user) { %>
+                <tr>
+                    <td><%= user.username %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.joined %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/topics">Topics</a></li>
+            <li><a href="/users">Users</a></li>
+            <li><a href="/posts">Posts</a></li>
+            <li><a href="/addpost">Add Post</a></li>
+        </ul>
+    </nav>
+</body>
 </html>

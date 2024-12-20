@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Sign Up to <%= forumName %></title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1>Sign Up to <%= forumName %></h1>
+    <nav>
+      <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/garden">My Garden</a></li>
+          <li><a href="/posts">Community</a></li>
+          <li><a href="/search">Shop</a></li>
+          <li><a href="/about">Our mission<a></li>
+      </ul>
+      </ul>
+  </nav>
+
+    <form method="POST" action="/registered">
+      First Name:<input id="first" type="text" name="first"/> 
+      Last Name:<input id="last" type="text" name="last" /> 
+      Email: <input id="email" type="email" name="email" placeholder="Enter your email" required />
+      Password: <input id="password" type="password" name="password" placeholder="Enter your password" required />
+      <input type="submit" value="Confirm" />
+    </form>
+  </body>
+</html>

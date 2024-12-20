@@ -64,18 +64,24 @@ module.exports = function(app, forumData) {
         res.render('search.ejs', forumData);
     });
 
-    app.get('/search-result', (req, res) => {
-        const keyword = req.query.keyword;
-        const sql = `SELECT posts.*, users.username, topics.name as topic
-                     FROM posts
-                     JOIN users ON posts.user_id = users.id
-                     JOIN topics ON posts.topic_id = topics.id
-                     WHERE posts.content LIKE ?`;
-        db.query(sql, ['%' + keyword + '%'], (err, results) => {
-            if (err) throw err;
-            res.render('posts.ejs', { ...forumData, posts: results });
-        });
+    app.get('/search_result', (req, res) => {
+        router.get('/search_result', function (req, res) {
+            // TODO: search in the database
+            res.send(req.query);
+         });
+        // const keyword = req.query.keyword;
+        // const sql = `SELECT posts.*, users.username, topics.name as topic
+        //              FROM posts
+        //              JOIN users ON posts.user_id = users.id
+        //              JOIN topics ON posts.topic_id = topics.id
+        //              WHERE posts.content LIKE ?`;
+        // db.query(sql, ['%' + keyword + '%'], (err, results) => {
+        //     if (err) throw err;
+        //     res.render('posts.ejs', { ...forumData, posts: results });
+        // });
     });
+
+    
 
     app.get('/profile/:id', (req, res) => {
         const sql = "SELECT * FROM users WHERE id = ?";

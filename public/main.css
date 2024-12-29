@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Proxima Nova', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f3f3; /* Very light pink */
@@ -228,3 +228,15 @@ input[type="submit"]:hover {
         font-size: 0.9rem;
     }
 }
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('/fonts/ProximaNova-Reg-webfont.woff2') format('woff2');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('/fonts/ProximaNova-Bold-webfont.woff2') format('woff2');
+    font-weight: bold;
+}
+

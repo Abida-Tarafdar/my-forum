@@ -72,7 +72,7 @@ var forumData = {forumName: "HiveFocus"};
                 return res.status(500).send("Internal Server Error");
             }
             if (results.length > 0) {
-                // Example: Redirect to user's profile or home page on successful login
+    
                 res.send(`Welcome back, ${results[0].first_name}!`);
             } else {
                 // Authentication failed
@@ -83,7 +83,7 @@ var forumData = {forumName: "HiveFocus"};
 
     app.get('/flashcards', (req, res) => {
         const user_id = req.session.user_id; 
-        // Query to get all flashcards for the logged-in user
+      
         const sql = "SELECT * FROM flashcards WHERE user_id = ?";
         db.query(sql, [user_id], (err, flashcards) => {
             if (err) throw err;
@@ -101,7 +101,7 @@ var forumData = {forumName: "HiveFocus"};
     app.post('/addflashcard', (req, res) => {
         const { title, question, answer } = req.body;
         //doesnt require login
-        const user_id = 1;  // This can be set to any default value, e.g., guest user, or left as NULL if you want
+        const user_id = 1;  
     
         // Insert the new flashcard into the database
         const sql = "INSERT INTO flashcards (user_id, title, question, answer) VALUES (?, ?, ?, ?)";
@@ -124,7 +124,7 @@ var forumData = {forumName: "HiveFocus"};
     });
 
 
-    
+    //--DISCUSSION THREAD--//
     // Add new post
     app.post('/addpost', function(req, res) {
         const {content } = req.body;
@@ -154,7 +154,7 @@ var forumData = {forumName: "HiveFocus"};
             LEFT JOIN replies ON posts.id = replies.post_id
             ORDER BY posts.id DESC;
         `;
-        const sqlTopics = "SELECT * FROM topics"; // Get available topics for the dropdown
+        const sqlTopics = "SELECT * FROM topics"; 
     
         db.query(sqlPosts, (err, postsResult) => {
             if (err) {
@@ -164,11 +164,11 @@ var forumData = {forumName: "HiveFocus"};
     
             db.query(sqlTopics, (err, topicsResult) => {
                 if (err) {
-                    console.log(err);  // Log error if SQL query fails
+                    console.log(err);  
                     return res.status(500).send("Error fetching topics.");
                 }
                 
-                // Organize the data by post (with replies)
+                // Organize the data with replies
                 let postsWithReplies = [];
                 postsResult.forEach((row) => {
                     let post = postsWithReplies.find(p => p.id === row.id);
@@ -193,7 +193,7 @@ var forumData = {forumName: "HiveFocus"};
                     }
                 });
     
-                // Render the combined posts page with posts and topics
+                // combined posts page and add posts ineto one
                 res.render('posts.ejs', { forumData, posts: postsWithReplies, topics: topicsResult });
             });
         });
@@ -205,7 +205,7 @@ var forumData = {forumName: "HiveFocus"};
         const postId = req.params.post_id;
         const { content } = req.body;
         
-        const userId = 1; // Assume user_id 1 for now if not logged in
+        const userId = 1; // assume user_id 1 if not logged in
         
         const sql = "INSERT INTO replies (post_id, user_id, content) VALUES (?, ?, ?)";
         db.query(sql, [postId, userId, content], (err, result) => {
